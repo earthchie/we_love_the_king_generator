@@ -149,8 +149,8 @@
         render();
         username.onkeyup = render;
         username.onchange = render;
-        offset.onchange = render;
-        fontsize.onchange = render;
+        offset.oninput = render;
+        fontsize.oninput = render;
         download.onclick = function (e) {
             ga('Main.send', 'event', 'สร้างรูปเรารักในหลวง - Download', 'view', username.value);
             this.href = canvas.toDataURL();

@@ -79,14 +79,11 @@
                             <label for="offset">ขนาดตัวอักษร</label>
                             <input id="fontsize" class="mdl-slider mdl-js-slider" type="range" min="30" max="150" value="70" tabindex="0"> </div>
                         <div class="text-right" style="width:300px;"> <a href="#" id="download" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"><i class="material-icons" style="top:0">file_download</i> ดาวน์โหลด</a> </div>
-                        
                         <div style="width:300px;">
                             <br>
                             <br>
                             <div class="fb-like" data-href="https://earthchie.com/loveking/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                         </div>
-                        
-                        
                         <hr style="width:300px;">
                         <p> ขอพระองค์ ทรงพระเจริญ
                             <br> ด้วยเกล้าด้วยกระหม่อม ขอเดชะ </p> <small>
@@ -97,14 +94,20 @@
                         </small> </div>
                 </div>
                 <div class="container">
-                   <hr>
+                    <hr>
                     <h2 style="font-size:2em">คอมเมนต์ <br> <small>(ตรงนี้ไม่ใช่ช่องกรอกชื่อนะครับ ไปกรอกด้านบน)</small></h2>
                     <div class="fb-comments" data-href="https://earthchie.com/loveking/" data-numposts="5" width="100%"></div>
                 </div>
-                
             </div>
         </main>
     </div>
+    <dialog id="fb_app_browser" class="mdl-dialog">
+        <h3 class="mdl-dialog__title">กรุณาเปิดเว็บนี้ในเบราเซอร์</h3>
+        <div class="mdl-dialog__content">
+            <p>คลิกที่เครื่องหมาย 3 จุดมุมขวาบน จากนั้นเลือก Open in Chrome (หรือ Open in Safari) </p>
+            <img src="fbapp.png" alt="">
+        </div>
+    </dialog>
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <script>
         var username = document.getElementById('username')
@@ -125,7 +128,21 @@
                     context.fillText('ในหลวง', 400, 310);
                 };
                 img.src = 'bg.png';
+            }
+            , isFacebookApp = function () {
+                var ua = navigator.userAgent || navigator.vendor || window.opera;
+                return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
             };
+        
+        if (!isFacebookApp()) {
+            var dialog = document.getElementById('fb_app_browser');
+            if (!dialog.showModal) {
+                dialogPolyfill.registerDialog(dialog);
+            }
+            dialog.showModal();
+            
+        }
+        
         if (window.location.hash) {
             username.value = decodeURIComponent(window.location.hash.replace(/#|@(.)+/g, '') || 'เรา');
         }

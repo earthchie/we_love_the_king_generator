@@ -23,6 +23,29 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
     <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="styles.css"> 
+    
+    <script>
+    
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-33058582-1', 'auto', {
+            'name': 'Main'
+        });
+        ga('send', 'pageview');
+        ga('Main.send', 'event', 'สร้างรูปเรารักในหลวง', 'view', '');
+
+        
+    </script>
 </head>
 <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -49,6 +72,12 @@
                         <div class="mdl-textfield mdl-js-textfield" style="width:300px;">
                             <label for="offset">ปรับตำแหน่ง</label>
                             <input id="offset" class="mdl-slider mdl-js-slider" type="range" min="0" max="200" value="100" tabindex="0">
+                        </div>
+                        
+                        <br>
+                        <div class="mdl-textfield mdl-js-textfield" style="width:300px;">
+                            <label for="offset">ขนาดตัวอักษร</label>
+                            <input id="fontsize" class="mdl-slider mdl-js-slider" type="range" min="30" max="150" value="70" tabindex="0">
                         </div>
                         
                         <div class="text-right" style="width:300px;">
@@ -82,20 +111,23 @@
         
         var username = document.getElementById('username'),
             offset = document.getElementById('offset'),
+            fontsize = document.getElementById('fontsize'),
             download = document.getElementById('download'),
             canvas = document.getElementById('canvas'),
             context = canvas.getContext('2d'),
             render = function(){
-                window.location.hash = username;
+                window.location.hash = username.value;
                 var img = new Image();
 
                 img.onload = function () {
                     context.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvas.width, canvas.height);
 
-                    context.font = 'normal 70px noworry';
+                    
                     context.fillStyle = '#fff';
-
+                    context.font = 'normal '+(+fontsize.value)+'px noworry';
                     context.fillText(username.value, +offset.value, 310);
+                    
+                    context.font = 'normal 70px noworry';
                     context.fillText('ในหลวง', 400, 310);
 
                 };
@@ -113,8 +145,10 @@
         username.onkeyup = render;
         username.onchange = render;
         offset.onchange = render;
+        fontsize.onchange = render;
         
         download.onclick = function(e) {
+            ga('Main.send', 'event', 'สร้างรูปเรารักในหลวง - Download', 'view', username.value);
             this.href = canvas.toDataURL();
             this.download = 'We_Love_the_King.png';
         };

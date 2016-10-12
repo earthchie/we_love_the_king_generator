@@ -125,7 +125,7 @@
                 img.src = 'bg.png';
             };
         if (window.location.hash) {
-            username.value = window.location.hash.replace(/#/, '');
+            username.value = window.location.hash.replace(/#|@(.)+/g, '') || เรา;
         }
         render();
         username.onkeyup = render;

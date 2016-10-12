@@ -4,20 +4,34 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="description" content="ณสามารถสร้างรูปโปรไฟล์เรารักในหลวงได้ง่ายๆ เพียงกรอกชื่อแล้วกดดาวน์โหลดได้ทันที">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="author" content="Earthchie <earthchie@gmail.com>">
     <title>สร้างรูปเรารักในหลวง</title>
+    
+    <meta property="fb:app_id" content="113581508678006" />
+    <meta property="fb:admins" content="581849270" />
+    <meta property="og:site_name" content="สร้างรูปเรารักในหลวง" />
+    <meta property="og:url" content="https://earthchie.com/loveking/" />
+    <meta property="og:title" content="เครื่องมือสร้างรูปเรารักในหลวง" />
+    <meta property="og:image" content="og.jpg" />
+    <meta property="og:description" content="คุณสามารถสร้างรูปโปรไฟล์เรารักในหลวงได้ง่ายๆ เพียงกรอกชื่อแล้วกดดาวน์โหลดได้ทันที" />
+    <meta property="og:locale" content="th_TH" />
+    <meta property="og:type" content="website" />
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
     <link rel="stylesheet" href="fonts/fonts.css">
-    <link rel="stylesheet" href="styles.css"> </head>
-
+    <link rel="stylesheet" href="styles.css"> 
+</head>
 <body>
-    <!-- Always shows a header, even in smaller screens. -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
-                <!-- Title --><span class="mdl-layout-title font-title" style="font-size:2.2em"><i class="material-icons">favorite</i> สร้างรูปเรารักในหลวง</span> </div>
+                <span class="mdl-layout-title font-title" style="font-size:2.2em">
+                    <i class="material-icons">favorite</i> สร้างรูปเรารักในหลวง
+                </span> 
+            </div>
         </header>
         <main class="mdl-layout__content">
             <div class="page-content">
@@ -68,10 +82,11 @@
         
         var username = document.getElementById('username'),
             offset = document.getElementById('offset'),
+            download = document.getElementById('download'),
             canvas = document.getElementById('canvas'),
             context = canvas.getContext('2d'),
-            render = function(username){
-                
+            render = function(){
+                window.location.hash = username;
                 var img = new Image();
 
                 img.onload = function () {
@@ -80,7 +95,7 @@
                     context.font = 'normal 70px noworry';
                     context.fillStyle = '#fff';
 
-                    context.fillText(username, +offset.value, 310);
+                    context.fillText(username.value, +offset.value, 310);
                     context.fillText('ในหลวง', 400, 310);
 
                 };
@@ -89,23 +104,19 @@
             }
         ;
         
-        render(username.value);
-        
-        username.onkeyup = function(){
-            render(this.value);
-        }
-        username.onchange = function(){
-            render(this.value);
-        }
-        offset.onchange = function(){
-            render(username.value);
+        if(window.location.hash){
+            username.value = window.location.hash.replace(/#/,'');
         }
         
-        document.getElementById('download').onclick = function(e) {
-            
+        render();
+        
+        username.onkeyup = render;
+        username.onchange = render;
+        offset.onchange = render;
+        
+        download.onclick = function(e) {
             this.href = canvas.toDataURL();
             this.download = 'We_Love_the_King.png';
-            
         };
     </script>
 </body>

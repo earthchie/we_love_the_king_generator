@@ -8,53 +8,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="author" content="Earthchie <earthchie@gmail.com>">
     <title>สร้างรูปเรารักในหลวง</title>
-    
     <meta property="fb:app_id" content="113581508678006" />
     <meta property="fb:admins" content="581849270" />
     <meta property="og:site_name" content="สร้างรูปเรารักในหลวง" />
     <meta property="og:url" content="https://earthchie.com/loveking/" />
     <meta property="og:title" content="เครื่องมือสร้างรูปเรารักในหลวง" />
-    <meta property="og:image" content="og.jpg" />
+    <meta property="og:image" content="og2.jpg" />
     <meta property="og:description" content="คุณสามารถสร้างรูปโปรไฟล์เรารักในหลวงได้ง่ายๆ เพียงกรอกชื่อแล้วกดดาวน์โหลดได้ทันที" />
     <meta property="og:locale" content="th_TH" />
     <meta property="og:type" content="website" />
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
     <link rel="stylesheet" href="fonts/fonts.css">
-    <link rel="stylesheet" href="styles.css"> 
-    
+    <link rel="stylesheet" href="styles.css">
     <script>
-    
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
             i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
             a.async = 1;
             a.src = g;
             m.parentNode.insertBefore(a, m)
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
         ga('create', 'UA-33058582-1', 'auto', {
             'name': 'Main'
         });
         ga('send', 'pageview');
         ga('Main.send', 'event', 'สร้างรูปเรารักในหลวง', 'view', '');
-
-        
     </script>
 </head>
+
 <body>
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=113581508678006";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
-            <div class="mdl-layout__header-row">
-                <span class="mdl-layout-title font-title" style="font-size:2.2em">
+            <div class="mdl-layout__header-row"> <span class="mdl-layout-title font-title" style="font-size:2.2em">
                     <i class="material-icons">favorite</i> สร้างรูปเรารักในหลวง
-                </span> 
-            </div>
+                </span> </div>
         </header>
         <main class="mdl-layout__content">
             <div class="page-content">
@@ -65,89 +67,64 @@
                     <div class="mdl-cell mdl-cell--6-col">
                         <h1 class="font-title">กรอกชื่อของคุณ</h1>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="username" value="เอิร์ธ">
+                            <input class="mdl-textfield__input" type="text" id="username">
                             <label class="mdl-textfield__label" for="username">ชื่อของคุณ</label>
                         </div>
                         <br>
                         <div class="mdl-textfield mdl-js-textfield" style="width:300px;">
                             <label for="offset">ปรับตำแหน่ง</label>
-                            <input id="offset" class="mdl-slider mdl-js-slider" type="range" min="0" max="200" value="100" tabindex="0">
-                        </div>
-                        
+                            <input id="offset" class="mdl-slider mdl-js-slider" type="range" min="0" max="200" value="100" tabindex="0"> </div>
                         <br>
                         <div class="mdl-textfield mdl-js-textfield" style="width:300px;">
                             <label for="offset">ขนาดตัวอักษร</label>
-                            <input id="fontsize" class="mdl-slider mdl-js-slider" type="range" min="30" max="150" value="70" tabindex="0">
-                        </div>
-                        
-                        <div class="text-right" style="width:300px;">
-                            <a href="#" id="download" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"><i class="material-icons" style="top:0">file_download</i> ดาวน์โหลด</a>
-                        </div>
-                        
+                            <input id="fontsize" class="mdl-slider mdl-js-slider" type="range" min="30" max="150" value="70" tabindex="0"> </div>
+                        <div class="text-right" style="width:300px;"> <a href="#" id="download" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"><i class="material-icons" style="top:0">file_download</i> ดาวน์โหลด</a> </div>
                         <hr style="width:300px;">
-                        
-                        <p>
-                            ขอพระองค์ ทรงพระเจริญ
-                            <br>
-                            ด้วยเกล้าด้วยกระหม่อม ขอเดชะ
-                            
-                        </p>
-                        
-                        <small>
+                        <p> ขอพระองค์ ทรงพระเจริญ
+                            <br> ด้วยเกล้าด้วยกระหม่อม ขอเดชะ </p> <small>
                             - ขอขอบคุณ <a href="https://www.facebook.com/kulthida.rotchanawit/media_set?set=a.10153936040086444.1073741907.628211443&type=3" target="_blank">Kulthida Kul</a> ผู้ออกแบบและผู้ปลุกกระแส <br>
                             - ขอบคุณฟอนต์น่ารักๆ <a href="http://www.f0nt.com/release/5011_the_little_uki_noworry/" target="_blank">5011_the_little_uki_noworry</a><br>
                             - Source Code อยู่ที่ <a href="https://github.com/earthchie/we_love_the_king_generator/" target="_blank">Github</a> ภายใต้ลิขสิทธิ์ <a href="http://www.wtfpl.net/about/" target="_blank"> WTFPL 2.0</a>
                             
-                        </small>
-                        
-                        
-                    </div>
+                        </small> </div>
                 </div>
+                <div class="container">
+                    <div class="fb-comments" data-href="https://earthchie.com/loveking/" data-numposts="5" width="100%"></div>
+                </div>
+                
             </div>
         </main>
     </div>
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <script>
-        
-        var username = document.getElementById('username'),
-            offset = document.getElementById('offset'),
-            fontsize = document.getElementById('fontsize'),
-            download = document.getElementById('download'),
-            canvas = document.getElementById('canvas'),
-            context = canvas.getContext('2d'),
-            render = function(){
+        var username = document.getElementById('username')
+            , offset = document.getElementById('offset')
+            , fontsize = document.getElementById('fontsize')
+            , download = document.getElementById('download')
+            , canvas = document.getElementById('canvas')
+            , context = canvas.getContext('2d')
+            , render = function () {
                 window.location.hash = username.value;
                 var img = new Image();
-
                 img.onload = function () {
                     context.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvas.width, canvas.height);
-
-                    
                     context.fillStyle = '#fff';
-                    context.font = 'normal '+(+fontsize.value)+'px noworry';
+                    context.font = 'normal ' + (+fontsize.value) + 'px noworry';
                     context.fillText(username.value, +offset.value, 310);
-                    
                     context.font = 'normal 70px noworry';
                     context.fillText('ในหลวง', 400, 310);
-
                 };
-
                 img.src = 'bg.png';
-            }
-        ;
-        
-        if(window.location.hash){
-            username.value = window.location.hash.replace(/#/,'');
+            };
+        if (window.location.hash) {
+            username.value = window.location.hash.replace(/#/, '');
         }
-        
         render();
-        
         username.onkeyup = render;
         username.onchange = render;
         offset.onchange = render;
         fontsize.onchange = render;
-        
-        download.onclick = function(e) {
+        download.onclick = function (e) {
             ga('Main.send', 'event', 'สร้างรูปเรารักในหลวง - Download', 'view', username.value);
             this.href = canvas.toDataURL();
             this.download = 'We_Love_the_King.png';

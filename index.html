@@ -134,7 +134,7 @@
                 return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
             };
         
-        if (!isFacebookApp()) {
+        if (isFacebookApp()) {
             var dialog = document.getElementById('fb_app_browser');
             if (!dialog.showModal) {
                 dialogPolyfill.registerDialog(dialog);

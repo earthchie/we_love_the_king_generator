@@ -111,13 +111,7 @@
             </div>
         </main>
     </div>
-    <dialog id="fb_app_browser" class="mdl-dialog">
-        <h3 class="mdl-dialog__title">กรุณาเปิดเว็บนี้ในเบราเซอร์</h3>
-        <div class="mdl-dialog__content">
-            <p>คลิกที่เครื่องหมาย 3 จุดมุมขวาบน จากนั้นเลือก Open in Chrome (หรือ Open in Safari) </p>
-            <img src="fbapp.png" alt="">
-        </div>
-    </dialog>
+    
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <script>
         var username = document.getElementById('username')
@@ -145,11 +139,7 @@
             };
         
         if (isFacebookApp()) {
-            var dialog = document.getElementById('fb_app_browser');
-            if (!dialog.showModal) {
-                dialogPolyfill.registerDialog(dialog);
-            }
-            dialog.showModal();
+            // @TODO: modal box to instruct users from in-app facebook browser to open in external browser
             
         }
         

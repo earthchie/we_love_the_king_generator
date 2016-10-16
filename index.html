@@ -42,41 +42,24 @@
 
 <body>
     <div id="fb-root"></div>
-    <script>
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=113581508678006";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+    
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
-            <div class="mdl-layout__header-row"> 
-                <span class="mdl-layout-title font-title" style="font-size:2.2em">
+            <div class="mdl-layout__header-row"> <span class="mdl-layout-title font-title" style="font-size:2.2em">
                     <i class="material-icons">favorite</i> สร้างรูปเรารักในหลวง
-                </span> 
-            </div>
+                </span> </div>
         </header>
         <main class="mdl-layout__content">
             <div class="page-content">
                 <p class="text-center container">
-                    <a href="http://king.kapook.com/farewell" target="_blank">
-                        <img src="http://king.kapook.com/farewell/app/images/og.png" alt="">
-                    </a>
+                    <a href="http://king.kapook.com/farewell" target="_blank"> <img src="farewell.png" alt=""> </a>
                 </p>
-                
                 <div class="mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col text-right">
                         <canvas id="canvas" width=600 height=600 style="float:right"></canvas>
                         <br style="clear:both">
-                        <p>
-                            ขอขอบคุณ <a href="https://www.facebook.com/domecloud.io/" target="_blank">DomeCloud co., ltd. </a> ที่ช่วยให้เว็บไม่ล่ม
-                            <br>
-                            ขอบคุณทีมงาน <a href="https://www.facebook.com/teamsocial.co/" target="_blank">ทีมโซเชียล</a> ผู้เชี่ยวชาญการทำ Online Marketing
-                        </p>
+                        <p> ขอขอบคุณ <a href="https://www.facebook.com/domecloud.io/" target="_blank">DomeCloud co., ltd. </a> ที่ช่วยให้เว็บไม่ล่ม
+                            <br> ขอบคุณทีมงาน <a href="https://www.facebook.com/teamsocial.co/" target="_blank">ทีมโซเชียล</a> ผู้เชี่ยวชาญการทำ Online Marketing </p>
                     </div>
                     <div class="mdl-cell mdl-cell--6-col">
                         <h1 class="font-title">กรอกชื่อของคุณ</h1>
@@ -92,7 +75,17 @@
                         <div class="mdl-textfield mdl-js-textfield" style="width:300px;">
                             <label for="offset">ขนาดตัวอักษร</label>
                             <input id="fontsize" class="mdl-slider mdl-js-slider" type="range" min="30" max="150" value="70" tabindex="0"> </div>
-                        <div class="text-right" style="width:300px;"> <a href="#" id="download" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"><i class="material-icons" style="top:0">file_download</i> ดาวน์โหลด</a> </div>
+                        <div class="text-center" style="width:400px;">
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--6-col">
+                                    <div style="width:80%;"> <a id="share2fb" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="width:100%"><span class="icon-facebook"></span> โพสต์ลงเฟซบุค</a>
+                                        <input type="hidden" id="fb_profile"> </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--6-col">
+                                    <div style="width:80%;"> <a id="download" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="background:rgb(76, 175, 80);width:100%"><i class="material-icons" style="top:0;">file_download</i> ดาวน์โหลด</a> </div>
+                                </div>
+                            </div>
+                        </div>
                         <div style="width:300px;">
                             <br>
                             <br>
@@ -100,9 +93,8 @@
                         </div>
                         <hr style="width:300px;">
                         <p> ขอพระองค์ ทรงพระเจริญ
-                            <br> ด้วยเกล้าด้วยกระหม่อม ขอเดชะ <br>
-                            ข้าพระพุทธเจ้า ทีมงาน <a href="https://www.facebook.com/teamsocial.co/" target="_blank">TeamSocial</a> และ ทีมงาม <a href="https://www.facebook.com/domecloud.io/" target="_blank">DomeCloud</a>
-                            </p> <small>
+                            <br> ด้วยเกล้าด้วยกระหม่อม ขอเดชะ
+                            <br> ข้าพระพุทธเจ้า ทีมงาน <a href="https://www.facebook.com/teamsocial.co/" target="_blank">TeamSocial</a> และ ทีมงาม <a href="https://www.facebook.com/domecloud.io/" target="_blank">DomeCloud</a> </p> <small>
                             - ขอขอบคุณ <a href="https://www.facebook.com/kulthida.rotchanawit/media_set?set=a.10153936040086444.1073741907.628211443&type=3" target="_blank">Kulthida Kul</a> ผู้ออกแบบและผู้ปลุกกระแส <br>
                             - ขอบคุณฟอนต์น่ารักๆ <a href="http://www.f0nt.com/release/5011_the_little_uki_noworry/" target="_blank">5011_the_little_uki_noworry</a><br>
                             - Source Code อยู่ที่ <a href="https://github.com/earthchie/we_love_the_king_generator/" target="_blank">Github</a> ภายใต้ลิขสิทธิ์ <a href="http://www.wtfpl.net/about/" target="_blank"> WTFPL 2.0</a>
@@ -117,51 +109,123 @@
             </div>
         </main>
     </div>
-    
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script src="jquery.min.js"></script>
     <script>
-        var username = document.getElementById('username')
-            , offset = document.getElementById('offset')
-            , fontsize = document.getElementById('fontsize')
-            , download = document.getElementById('download')
-            , canvas = document.getElementById('canvas')
-            , context = canvas.getContext('2d')
-            , render = function () {
-                window.location.hash = username.value;
-                var img = new Image();
-                img.onload = function () {
-                    context.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvas.width, canvas.height);
-                    context.fillStyle = '#fff';
-                    context.font = 'normal ' + (+fontsize.value) + 'px noworry';
-                    context.fillText(username.value, +offset.value, 310);
-                    context.font = 'normal 70px noworry';
-                    context.fillText('ในหลวง', 400, 310);
+        $(function () {
+            var username = document.getElementById('username')
+                , offset = document.getElementById('offset')
+                , share2fb = document.getElementById('share2fb')
+                , fontsize = document.getElementById('fontsize')
+                , download = document.getElementById('download')
+                , canvas = document.getElementById('canvas')
+                , context = canvas.getContext('2d')
+                , render = function () {
+                    window.location.hash = username.value;
+                    var img = new Image();
+                    img.onload = function () {
+                        context.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvas.width, canvas.height);
+                        context.fillStyle = '#fff';
+                        context.font = 'normal ' + (+fontsize.value) + 'px noworry';
+                        context.fillText(username.value, +offset.value, 310);
+                        context.font = 'normal 70px noworry';
+                        context.fillText('ในหลวง', 400, 310);
+                    };
+                    img.src = 'bg.png';
+                }
+                , isFacebookApp = function () {
+                    var ua = navigator.userAgent || navigator.vendor || window.opera;
+                    return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
                 };
-                img.src = 'bg.png';
+            if (isFacebookApp()) {
+                // @TODO: modal box to instruct users from in-app facebook browser to open in external browser
             }
-            , isFacebookApp = function () {
-                var ua = navigator.userAgent || navigator.vendor || window.opera;
-                return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+            if (window.location.hash) {
+                username.value = decodeURIComponent(window.location.hash.replace(/#|@(.)+/g, '') || 'เรา');
+            }
+            render();
+            username.onkeyup = render;
+            username.onchange = render;
+            offset.oninput = render;
+            fontsize.oninput = render;
+            download.onclick = function (e) {
+                ga('Main.send', 'event', 'สร้างรูปเรารักในหลวง - Download', 'view', username.value);
+                this.href = canvas.toDataURL();
+                this.download = 'We_Love_the_King.png';
             };
-        
-        if (isFacebookApp()) {
-            // @TODO: modal box to instruct users from in-app facebook browser to open in external browser
-            
+            $.getScript('//connect.facebook.net/en_th/sdk.js', function () {
+                FB.init({
+                    appId: '113581508678006'
+                    , version: 'v2.1'
+                });
+                FB.XFBML.parse();
+                share2fb.onclick = function () {
+                    var data = canvas.toDataURL('image/png')
+                        , blob;
+                    try {
+                        blob = dataURItoBlob(data);
+                    }
+                    catch (e) {
+                        console.log(e);
+                    }
+                    var handler = function (s, res) {
+                        if (s) {
+                            window.location.href = 'https://www.facebook.com/me/posts/' + res.id.split('_')[1];
+                        }
+                        else {
+                            alert('พบข้อผิดพลาด กรุณาลองใหม่อีกครั้ง');
+                        }
+                    }
+                    FB.login(function (response) {
+                        postImageToFacebook(response.authResponse.accessToken, blob, handler);
+                    }, {
+                        scope: "publish_actions"
+                    });
+                }
+            });
+        })
+
+        function dataURItoBlob(dataURI) {
+            var byteString = atob(dataURI.split(',')[1]);
+            var ab = new ArrayBuffer(byteString.length);
+            var ia = new Uint8Array(ab);
+            for (var i = 0; i < byteString.length; i++) {
+                ia[i] = byteString.charCodeAt(i);
+            }
+            return new Blob([ab], {
+                type: 'image/png'
+            });
         }
-        
-        if (window.location.hash) {
-            username.value = decodeURIComponent(window.location.hash.replace(/#|@(.)+/g, '') || 'เรา');
+
+        function postImageToFacebook(token, imageData, callback) {
+            var fd = new FormData();
+            fd.append("access_token", token);
+            fd.append("source", imageData);
+            fd.append("no_story", true);
+            fd.append("caption", 'ร่วมทำภาพเรารักในหลวงได้ที่ https://loveking.earthchie.com/ #EarthchieLoveTheKing');
+            // Upload image to facebook without story(post to feed)
+            $.ajax({
+                url: "https://graph.facebook.com/me/photos?access_token=" + token
+                , type: "POST"
+                , data: fd
+                , processData: false
+                , contentType: false
+                , cache: false
+                , success: function (data) {
+                    FB.api("/me/feed", "POST", {
+                        "message": 'ร่วมทำภาพเรารักในหลวงได้ที่ https://loveking.earthchie.com/?n=' + (Math.random() * 1000 % 100)
+                        , "link": 'https://www.facebook.com/photo.php?fbid=' + data.id
+                    , }, function (response) {
+                        if (response && !response.error) {
+                            callback(true, response);
+                        }
+                        else {
+                            callback(false, response)
+                        }
+                    });
+                }
+            });
         }
-        render();
-        username.onkeyup = render;
-        username.onchange = render;
-        offset.oninput = render;
-        fontsize.oninput = render;
-        download.onclick = function (e) {
-            ga('Main.send', 'event', 'สร้างรูปเรารักในหลวง - Download', 'view', username.value);
-            this.href = canvas.toDataURL();
-            this.download = 'We_Love_the_King.png';
-        };
     </script>
 </body>
 

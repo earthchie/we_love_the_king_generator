@@ -213,7 +213,7 @@
                 , cache: false
                 , success: function (data) {
                     FB.api("/me/feed", "POST", {
-                        , "link": 'https://www.facebook.com/photo.php?fbid=' + data.id
+                        "link": 'https://www.facebook.com/photo.php?fbid=' + data.id
                     , }, function (response) {
                         if (response && !response.error) {
                             callback(true, response);
